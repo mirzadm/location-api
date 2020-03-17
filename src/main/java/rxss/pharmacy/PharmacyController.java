@@ -14,8 +14,8 @@ public class PharmacyController {
 	private PharmacyService pharmacyService;  
 	
 	@RequestMapping("/pharmacies")
-	public Pharmacy getPharmacy(@RequestParam double lat, @RequestParam double lon) {
-		return pharmacyService.getClosestharmacies();
+	public Pharmacy getClosestPharmacies(@RequestParam double lat, @RequestParam double lon) {
+		return pharmacyService.getClosestPharmacies(lat, lon);
 	}
 
 }
