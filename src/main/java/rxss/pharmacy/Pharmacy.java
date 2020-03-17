@@ -5,10 +5,24 @@ public class Pharmacy {
 	private String name;
 	private String address;
 	private String city;
-	private String zipcode;
+	private String state;
+	private int zipcode;
 	private double latitude;
 	private double longitude;
 
+	public Pharmacy() {
+		
+	}
+	public Pharmacy(String name, String address, String city, String state, int zipcode, double latitude, double longitude) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.city = city;
+		this.state = state;
+		this.zipcode = zipcode;
+		this.latitude = latitude;
+		this.longitude = longitude;
+	}
 	public String getName() {
 		return name;
 	}
@@ -27,10 +41,16 @@ public class Pharmacy {
 	public void setCity(String city) {
 		this.city = city;
 	}
-	public String getZipcode() {
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public int getZipcode() {
 		return zipcode;
 	}
-	public void setZipcode(String zipcode) {
+	public void setZipcode(int zipcode) {
 		this.zipcode = zipcode;
 	}
 	public double getLatitude() {
