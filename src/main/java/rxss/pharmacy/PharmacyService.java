@@ -20,6 +20,7 @@ public class PharmacyService {
 		double minDistance = -1;
 		Pharmacy closestPharmacy = null;
 		double distance;
+		// Find min distance pharmacy
 		for (Pharmacy pharmacy : pharmacies) {
 			distance = calculateDistance(latitude, longitude, pharmacy.getLatitude(), pharmacy.getLongitude());
 			if (minDistance == -1 || distance < minDistance) {
@@ -27,7 +28,7 @@ public class PharmacyService {
 				closestPharmacy = pharmacy;
 			}
 		}
-		System.out.println(minDistance);
+		// Create a hash map for pharmacy info
 		HashMap<String, Object> closestPharmacyMap = new HashMap<String, Object>();
 		closestPharmacyMap.put("Name", closestPharmacy.getName());
 		closestPharmacyMap.put("Address", closestPharmacy.getAddress());
